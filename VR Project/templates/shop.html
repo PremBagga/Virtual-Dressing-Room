@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Status Bar for Navigation -->
+<nav class="status-bar">
+    <a href="{{ url_for('home') }}">Home</a> &gt; 
+    <a href="{{ url_for('shop', gender=gender) }}">{{ gender.capitalize() }}'s Collection</a>
+</nav>
+
+<h1 class="collection-title">{{ gender.capitalize() }}'s Collection</h1>
+<div class="product-grid">
+    {% for product in products %}
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='images/' + product.image) }}" alt="{{ product.name }}">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description | safe }}</p>
+        <p>Price: ${{ product.price }}</p>
+        
+        <div class="button-container">
+            <a href="{{ url_for('add_to_cart', product_id=product.id) }}" class="btn">Add to Cart</a>
+            <a href="{{ url_for('try_on', product_id=product.id) }}" class="btn">Try On</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

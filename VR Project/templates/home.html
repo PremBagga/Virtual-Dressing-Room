@@ -1,0 +1,47 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Navigation Bar -->
+<!-- <nav class="navbar">
+    <div class="navbar-container">
+        <a href="/" class="navbar-logo"></a>
+        <ul class="navbar-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+</nav> -->
+
+<!-- Hero Section with Background Image and Logo -->
+<div class="hero-section">
+    <div class="overlay">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        <!-- <h1>Welcome to Virtual Dressing Room</h1> -->
+    </div>
+</div>
+
+<!-- Categories Section -->
+<div class="category-section">
+    <h2>Choose Your Category</h2>
+    <div class="category-container">
+        <div class="category">
+            <a href="{{ url_for('shop', gender='men') }}" class="button">
+                <img src="{{ url_for('static', filename='images/men_category.jpg') }}" alt="Men's Clothing" class="category-image">
+                <div class="category-title">Men's Clothing</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="{{ url_for('shop', gender='women') }}" class="button">
+                <img src="{{ url_for('static', filename='images/women_category.jpg') }}" alt="Women's Clothing" class="category-image">
+                <div class="category-title">Women's Clothing</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

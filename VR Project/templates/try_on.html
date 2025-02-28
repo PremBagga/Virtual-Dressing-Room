@@ -1,0 +1,115 @@
+<!-- try_on.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <style>
+        img {
+            max-width: 300px; /* Set a maximum width for images */
+            height: auto;     /* Maintain aspect ratio */
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ gender.capitalize() }}'s Try-On</h1>
+    
+    
+    <div class="image-container">
+        <h2>Product Image:</h2>
+        <img src="{{ url_for('static', filename='images/' + product_image) }}" alt="Product Image">
+    </div>
+    
+    {% if person_image_path %}
+        <div class="image-container">
+            <h2>Your Selected Person Image:</h2>
+            <img src="{{ url_for('static', filename='uploads/' + person_image_path.split('/')[-1]) }}" alt="Person Image">
+        </div>
+    {% endif %}
+    
+    {% if result_image %}
+        <div class="image-container">
+            <h2>Your Virtual Try-On Result:</h2>
+            <img src="{{ url_for('static', filename=result_image.split('/')[-1]) }}" alt="Try-On Result">
+        </div>
+    {% endif %}
+    
+    <h2>Select Your Image:</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="personImage" accept="image/*" required>
+        <button type="submit">Try On</button>
+    </form>
+    
+    <a href="{{ url_for('shop', gender=gender) }}">Back to Shop</a>
+</body>
+</html> -->
+
+<!-- try_on.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <style>
+        img {
+            max-width: 300px; /* Set a maximum width for images */
+            height: auto;     /* Maintain aspect ratio */
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ gender.capitalize() }}'s Try-On</h1>
+    
+    <!-- Display the selected product image -->
+    <div class="image-container">
+        <h2>Product Image:</h2>
+        <img src="{{ url_for('static', filename='images/' + product_image) }}" alt="Product Image">
+    </div>
+    
+    {% if person_image_path %}
+        <div class="image-container">
+            <h2>Your Selected Person Image:</h2>
+            <img src="{{ url_for('static', filename='uploads/' + person_image_path) }}" alt="Person Image">
+        </div>
+    {% endif %}
+
+
+    <!-- {% if result_image %}
+    <div class="image-container">
+        <h2>Your Virtual Try-On Result:</h2>
+        <img src="{{ url_for('static', filename=result_image) }}" alt="Try-On Result">
+    </div>
+    {% endif %} -->
+
+    {% if result_image %}
+    <div class="image-container">
+        <h2>Your Virtual Try-On Result:</h2>
+        <img src="{{ url_for('static', filename=result_image) }}" alt="Try-On Result">
+    </div>
+    {% endif %}
+
+
+    
+    <h2>Select Your Image:</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="personImage" accept="image/*" required>
+        <button type="submit">Try On</button>
+    </form>
+    
+    <a href="{{ url_for('shop', gender=gender) }}">Back to Shop</a>
+</body>
+</html>

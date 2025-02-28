@@ -1,0 +1,473 @@
+/* About Page Styling */
+.about-section, .technology-section, .future-section, .team-section {
+    margin: 20px auto;
+    max-width: 800px; /* Limit the width for readability */
+    padding: 15px;
+    background-color: #f8f9fa; /* Light background color for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text color for better contrast */
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0; /* Spacing above and below */
+    color: #007bff; /* Main heading color matching the theme */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px; /* Spacing above */
+    color: #007bff; /* Blue color for headings */
+}
+
+ul {
+    list-style-type: disc; /* Bullet points for lists */
+    margin-left: 20px; /* Indent list items */
+}
+
+/* Team Section Styling */
+.team-section ul {
+    list-style-type: none; /* No bullets for team members */
+    padding: 0; /* Remove padding */
+}
+
+.team-section li {
+    margin-bottom: 10px; /* Space between team members */
+}
+
+/* General Body Styling for Better Consistency */
+body {
+    background-color: #e9ecef; /* Light gray background for the body */
+    color: #212529; /* Darker text for overall readability */
+}
+
+
+
+/* Menu Bar Styling */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 1.5rem;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #f9c74f; /* Hover effect */
+}
+
+/* Collection Title Styling */
+.collection-title {
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Change text color */
+    text-align: center; /* Center align the title */
+    margin: 20px 0; /* Add space above and below */
+    position: relative; /* For pseudo-element */
+}
+
+/* Underline Effect for Collection Title */
+.collection-title::after {
+    content: ""; /* Create a pseudo-element */
+    display: block; /* Make it a block element */
+    width: 50%; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #007bff; /* Color of the underline */
+    margin: 10px auto; /* Center it below the title */
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* Cart Title Styling */
+.cart-title {
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Change text color */
+    text-align: center; /* Center align the title */
+    margin: 20px 0; /* Add space above and below */
+    position: relative; /* For pseudo-element */
+}
+
+/* Underline Effect for Cart Title */
+.cart-title::after {
+    content: ""; /* Create a pseudo-element */
+    display: block; /* Make it a block element */
+    width: 50%; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #007bff; /* Color of the underline */
+    margin: 10px auto; /* Center it below the title */
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* Cart Item Styling Adjustments */
+.cart-item {
+    flex: 1;
+    max-width: 30%; /* Maintain width for three items */
+    margin: 0 5px; /* Reduced margin between items */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px; /* Moderate padding */
+    background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Cart Item Image Styling */
+.cart-item img {
+    max-width: 150px; /* Match the shop.html image size */
+    height: auto;
+    margin-bottom: 10px; /* Moderate space under image */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Cart Item Details */
+.cart-details h2 {
+    font-size: 1.25rem; /* Slightly larger title */
+    margin: 5px 0;
+}
+
+.cart-details p {
+    font-size: 0.9rem; /* Slightly larger description */
+    margin-bottom: 5px;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Less space between buttons */
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 15px; /* Moderate button size */
+    font-size: 0.85rem; /* Smaller font size */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url("/static/images/background1.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* Responsive Hero Section for Smaller Screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Categories Section */
+.category-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Category Container Styling */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+/* Category Item Styling */
+.category {
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category img {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.category img:hover {
+    transform: scale(1.05);
+}
+
+.category-title {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Enhanced Button Styling */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Responsive Category Images */
+@media screen and (max-width: 768px) {
+    .category img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .category-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .category img {
+        width: 150px;
+        height: 250px;
+    }
+
+    .category-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Product Grid Styling */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 products in a row */
+    gap: 30px;
+    margin: 20px auto;
+    max-width: 1200px; /* Limit max width */
+}
+
+.product-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-item h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Product Grid */
+@media screen and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Cart Items Container */
+.cart-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Cart Row Styling */
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px; /* Less margin for a tighter layout */
+}
+
+/* Cart Item Styling */
+.cart-item {
+    flex: 1;
+    max-width: 30%; /* Slightly narrower for more compact display */
+    margin: 0 5px; /* Reduced margin between items */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px; /* Moderate padding */
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Cart Item Image */
+.cart-item img {
+    max-width: 150px; /* Match the shop.html image size */
+    height: auto;
+    margin-bottom: 10px; /* Moderate space under image */
+    border-radius: 3px;
+}
+
+/* Cart Item Details */
+.cart-details h2 {
+    font-size: 1.25rem; /* Slightly larger title */
+    margin: 5px 0;
+}
+
+.cart-details p {
+    font-size: 0.9rem; /* Slightly larger description */
+    margin-bottom: 5px;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Less space between buttons */
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 15px; /* Moderate button size */
+    font-size: 0.85rem; /* Smaller font size */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .cart-item {
+        max-width: 45%; /* 2 items per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cart-item {
+        max-width: 100%; /* 1 item per row on smaller screens */
+    }
+}

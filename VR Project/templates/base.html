@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Virtual Dressing Room</title>
+</head>
+<body>
+
+<!-- Header Section with Menu Bar -->
+<header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo Section -->
+            <a href="{{ url_for('home') }}" class="navbar-logo"></a>
+            
+            <!-- Menu Links -->
+            <ul class="navbar-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('shop', gender='men') }}">Men's Collection</a></li>
+                <li><a href="{{ url_for('shop', gender='women') }}">Women's Collection</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('cart') }}">Cart ({{ session.get('cart', [])|length }})</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content Block -->
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+</body>
+</html>
